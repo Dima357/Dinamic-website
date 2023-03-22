@@ -50,7 +50,7 @@ window.addEventListener("DOMContentLoaded", function () {
             });
 
             document.querySelector(`[data-target="${path}"]`).style.display = "block";
-            document.querySelector(".section-work__picture-container").style.backgroundImage = "url(../img/how-work/step-" + path + "-pic.jpg)";
+            document.querySelector(".section-work__picture-container").style.backgroundImage = "url(./img/how-work/step-" + path + "-pic.jpg)";
         });
         
         step.addEventListener("keypress", function (event) {
@@ -61,7 +61,7 @@ window.addEventListener("DOMContentLoaded", function () {
             });
 
             document.querySelector(`[data-target="${path}"]`).style.display = "block";
-            document.querySelector(".section-work__picture-container").style.backgroundImage = "url(../img/how-work/step-" + path + "-pic.jpg)";
+            document.querySelector(".section-work__picture-container").style.backgroundImage = "url(./img/how-work/step-" + path + "-pic.jpg)";
         });
     });
 
