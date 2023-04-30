@@ -19,8 +19,7 @@ window.addEventListener("DOMContentLoaded", function () {
     nav__exit.addEventListener("click", function () {
         nav.classList.add("burger__nav_close");
         setTimeout(() => {
-            nav.classList.remove("burger__nav");
-            nav.classList.remove("burger__nav_close");
+            nav.classList.remove("burger__nav", "burger__nav_close");
             nav__exit.style.display = "none";
         }, 1000);
     });
@@ -39,14 +38,14 @@ window.addEventListener("DOMContentLoaded", function () {
     form__button_close.addEventListener("click", function () {
         headerForm.classList.add('header__form-container_close');
         setTimeout(() => {
-            headerForm.classList.remove('header__form-container_active');
+            headerForm.classList.remove('header__form-container_active', 'header__form-container_close');
         }, 1000);
     });
 
     form__button_close.addEventListener("keypress", function () {
         headerForm.classList.add('header__form-container_close');
         setTimeout(() => {
-            headerForm.classList.remove('header__form-container_active');
+            headerForm.classList.remove('header__form-container_active', 'header__form-container_close');
         }, 1000);
     });
     
