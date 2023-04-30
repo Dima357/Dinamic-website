@@ -17,29 +17,39 @@ window.addEventListener("DOMContentLoaded", function () {
 
 
     nav__exit.addEventListener("click", function () {
-        nav.classList.remove("burger__nav");
-        nav__exit.style.display = "none";
+        nav.classList.add("burger__nav_close");
+        setTimeout(() => {
+            nav.classList.remove("burger__nav");
+            nav.classList.remove("burger__nav_close");
+            nav__exit.style.display = "none";
+        }, 1000);
     });
-
+    
+    const headerForm = document.querySelector(".header__form-container");
 
     icon_search.addEventListener("click", function () {
-        document.querySelector(".header__form-container").style.display = "flex";
+        headerForm.classList.add('header__form-container_active');
     });
 
     icon_search.addEventListener("keypress", function () {
-        document.querySelector(".header__form-container").style.display = "flex";
+        headerForm.classList.add('header__form-container_active');
     });
 
 
     form__button_close.addEventListener("click", function () {
-        document.querySelector(".header__form-container").style.display = "none";
+        headerForm.classList.add('header__form-container_close');
+        setTimeout(() => {
+            headerForm.classList.remove('header__form-container_active');
+        }, 1000);
     });
 
     form__button_close.addEventListener("keypress", function () {
-        document.querySelector(".header__form-container").style.display = "none";
+        headerForm.classList.add('header__form-container_close');
+        setTimeout(() => {
+            headerForm.classList.remove('header__form-container_active');
+        }, 1000);
     });
-
-
+    
 
     steps.forEach(function (step) {
         step.addEventListener("click", function (event) {
